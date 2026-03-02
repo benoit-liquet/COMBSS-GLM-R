@@ -70,8 +70,8 @@ source("R/COMBSS_logistic.R")
 
 # Load example data (tab-separated, no header)
 # Column 1 = response (0/1), Column 2 = intercept, Columns 3+ = features
-train <- read.csv("data/small_train.csv", sep = "\t", header = FALSE)
-test  <- read.csv("data/small_test.csv",  sep = "\t", header = FALSE)
+train <- read.csv("data/Example_small_data_train.csv", sep = "\t", header = FALSE)
+test  <- read.csv("data/Example_small_data_test.csv",  sep = "\t", header = FALSE)
 
 # Run COMBSS for subset sizes k = 1 to 15
 result <- COMBSS_logistic(
