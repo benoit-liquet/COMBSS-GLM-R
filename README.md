@@ -12,11 +12,11 @@ for generalised linear models, as described in:
 
 ## Overview
 
-Best subset selection — finding the optimal subset of *k* predictors that maximises
-the likelihood — is fundamental for interpretable and parsimonious statistical
+Best subset selection, finding the optimal subset of *k* predictors that maximises
+the likelihood, is fundamental for interpretable and parsimonious statistical
 modelling, but is NP-hard in general. COMBSS overcomes this computational barrier
 by reformulating the discrete combinatorial problem as a continuous optimisation
-over the hypercube [0,1]^p via a Boolean relaxation, and solving it using a
+over the hypercube $[0,1]^p$ via a Boolean relaxation, and solving it using a
 Frank–Wolfe homotopy algorithm.
 
 The key innovation of this implementation is the use of **Danskin's envelope
@@ -38,5 +38,22 @@ the paper.
 - **Efficient inner solves** via the `glmnet` package
 - **Gradient computation** via Danskin's envelope theorem (no Hessian required)
 - **Frank–Wolfe homotopy algorithm** with geometric delta schedule
+
+## Installation
+
+No installation is required. Clone the repository and source the main function
+file in R:
+
+```{r}
+source("R/COMBSS_logistic.R")
+```
+
+## Dependencies
+
+The only dependency is glmnet:
+
+```{r}
+install.packages("glmnet")
+```
 
 
