@@ -7,7 +7,7 @@ for logistic and multinomial regression, as described in:
 > for Biomedical Applications* (2026)
 
 COMBSS reformulates the NP-hard best subset selection problem as a continuous
-optimisation over the hypercube [0,1]^p via a Boolean relaxation, and solves it
+optimisation over the hypercube $[0,1]^p$ via a Boolean relaxation, and solves it
 using a Frank–Wolfe homotopy algorithm. The gradient of the relaxed objective
 is computed exactly using Danskin's envelope theorem, requiring only a single
 ridge-penalised GLM solve per iteration.
