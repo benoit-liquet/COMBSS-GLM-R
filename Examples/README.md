@@ -12,8 +12,8 @@ source("../R/COMBSS_logistics.R")
 ## Load example data (tab-separated, no header)
 ### Column 1 = response (0/1), Column 2 = intercept, Columns 3+ = features
 ```{r}
-train <- read.csv("../data/n-200-p1000Replica1.csv", sep = "\t", header = FALSE)
-test <- read.table("../data/n-200-p1000Test-Replica1-500.txt", sep = "\t", header = FALSE)
+train <- read.csv("../DATA/n-200-p1000Replica1.csv", sep = "\t", header = FALSE)
+test <- read.table("../DATA/n-200-p1000Test-Replica1-500.txt", sep = "\t", header = FALSE)
 dim(test)
 ```{r}
 
