@@ -95,3 +95,25 @@ cat("Test accuracy:", result$test_accuracy[result$best_k], "\n")
 
 ```
 
+
+```
+Best k: 10
+Best subset: 1 2 3 4 5 6 7 8 9 10
+
+Test accuracies:
+  k =  1 | accuracy = 0.704 | variables: 4
+  k =  2 | accuracy = 0.756 | variables: 4,6
+  k =  3 | accuracy = 0.776 | variables: 3,4,6
+  k =  4 | accuracy = 0.829 | variables: 3,4,6,8
+  k =  5 | accuracy = 0.837 | variables: 3,4,6,8,9
+  k =  6 | accuracy = 0.843 | variables: 3,4,6,7,8,9
+  k =  7 | accuracy = 0.850 | variables: 3,4,5,6,7,8,9
+  k =  8 | accuracy = 0.878 | variables: 2,3,4,5,6,7,8,9
+  k =  9 | accuracy = 0.889 | variables: 1,2,3,4,5,6,7,8,9
+  k = 10 | accuracy = 0.898 | variables: 1,2,3,4,5,6,7,8,9,10
+  k = 11 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11
+  k = 12 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12
+  k = 13 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,29
+  k = 14 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,28,29
+  k = 15 | accuracy = 0.884 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,28,29,30
+```
