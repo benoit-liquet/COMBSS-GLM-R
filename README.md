@@ -117,3 +117,11 @@ Test accuracies:
   k = 14 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,28,29
   k = 15 | accuracy = 0.884 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,28,29,30
 ```
+
+COMBSS correctly identifies the best model at **k=10**, recovering all 10
+truly active variables (variables 1–10) with a test accuracy of **89.8%**.
+The inclusion path shows that the strongest signals (variables 4 and 6) are
+selected first, with the remaining active variables progressively added as k
+increases. Beyond k=10, accuracy slightly decreases as noise variables enter
+the model, confirming that the method correctly identifies the true model
+size.
