@@ -3,6 +3,7 @@
 
 The first 10 features are related to the outcome (see the paper regarding the true generated model)
 
+## Source the model 
 ```{r}
 library(glmnet)
 source("../R/COMBSS_logistics.R")
