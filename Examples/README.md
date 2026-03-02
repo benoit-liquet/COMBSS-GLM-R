@@ -39,6 +39,7 @@ result <- COMBSS_logistic(
 
 ## View results
 
+```{r}
 cat("Best k:", result$best_k, "\n")
 cat("Best subset:", result$best_subset, "\n")
 cat("Test accuracies:\n")
@@ -47,3 +48,33 @@ for (k in 1:15) {
               k, result$test_accuracy[k],
               paste(result$selected_models[[k]], collapse = ",")))
 }
+```
+
+
+
+```
+
+Best k: 12
+Best subset: 1 2 3 4 5 6 7 8 9 10 92 760
+
+Test accuracies:
+  k =  1 | accuracy = 0.707 | variables: 7
+  k =  2 | accuracy = 0.786 | variables: 4,7
+  k =  3 | accuracy = 0.791 | variables: 4,6,7
+  k =  4 | accuracy = 0.789 | variables: 4,6,7,8
+  k =  5 | accuracy = 0.834 | variables: 2,4,6,7,8
+  k =  6 | accuracy = 0.837 | variables: 2,4,5,6,7,8
+  k =  7 | accuracy = 0.842 | variables: 2,3,4,5,6,7,8
+  k =  8 | accuracy = 0.858 | variables: 1,2,3,4,5,6,7,8
+  k =  9 | accuracy = 0.872 | variables: 1,2,3,4,5,6,7,8,9
+  k = 10 | accuracy = 0.879 | variables: 1,2,3,4,5,6,7,8,9,10
+  k = 11 | accuracy = 0.880 | variables: 1,2,3,4,5,6,7,8,9,10,92
+  k = 12 | accuracy = 0.882 | variables: 1,2,3,4,5,6,7,8,9,10,92,760
+  k = 13 | accuracy = 0.879 | variables: 1,2,3,4,5,6,7,8,9,10,92,486,760
+  k = 14 | accuracy = 0.880 | variables: 1,2,3,4,5,6,7,8,9,10,92,486,760,825
+  k = 15 | accuracy = 0.880 | variables: 1,2,3,4,5,6,7,8,9,10,92,486,760,825,978
+```
+
+COMBSS successfully recovers all 10 truly active variables (variables 1–10)
+by **k=10** with a test accuracy of **87.9%**, despite the challenging $p >> n$
+setting (p=1000, n=200)
