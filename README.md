@@ -58,6 +58,12 @@ install.packages("glmnet")
 
 ## Quick Start
 
+### Example 1: Low-Dimensional Simulation (n=200, p=30)
+This example demonstrates COMBSS in a low-dimensional logistic regression
+setting with n=200 observations and p=30 predictors, where the first 10
+predictors are truly active.
+
+
 ```{r}
 library(glmnet)
 source("R/COMBSS_logistic.R")
