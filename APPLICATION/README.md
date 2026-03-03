@@ -171,50 +171,9 @@ accuracy, and perfect classification is reached at k = 12 with genes 187,
 246, 509, 545, 910, 1074, 1319, 1389, 1645, 1954, 1955, and 2050. Beyond
 k = 13, accuracy drops back to 95% and remains stable.
 
-## Algorithm Details
 
-### Penalty Schedule Calibration
+![Best-subset inclusion path](khan_inclusion_path.png)
 
-The penalty schedule is automatically calibrated from the data. The largest
-eigenvalue ν_max of X_u^T X_u (where X_u is the column-normalised design
-matrix of relaxed variables) is estimated via power iteration. The
-concentration penalty is then set as δ_conc = ν_max / (4n) for multinomial
-models, and the schedule parameters are:
-
-```
-δ_min = 10⁻³ × δ_conc
-δ_max = δ_conc
-r = (δ_max / δ_min)^(1/N)
-```
-
-This ensures the penalty traverses the full range [δ_min, δ_conc] uniformly
-on a log-scale within N steps.
-
-### Inner Solver
-
-The inner ridge-penalised multinomial GLM is solved via `glmnet` with
-`family = "multinomial"` and `type.multinomial = "grouped"`, which enforces
-a common sparsity pattern across the C−1 = 3 class-specific coefficient
-vectors. The per-variable penalty weights ω_j(t) = (λ + δ)/t_j² − δ are
-mapped to `glmnet`'s `penalty.factor` parameterisation as:
-
-```
-pf_j = p × ω_j / Σ_j ω_j
-λ_glmnet = 2 × Σ_j ω_j / p
-```
-
-### Danskin Gradient (Multinomial Extension)
-
-The gradient of the relaxed objective with respect to t_j is computed via
-Danskin's envelope theorem. For the multinomial case, this sums the squared
-coefficients across all C−1 classes for each variable j:
-
-```
-∂f/∂t_j = −2(λ + δ) ‖Ξ_{m+j,:}‖² / t_j³
-```
-
-where Ξ is the minimiser of the inner ridge problem. This avoids any Hessian
-computation and requires only one call to `glmnet` per iteration.
 
 ### Refitting
 
