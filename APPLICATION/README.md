@@ -253,42 +253,11 @@ Runs the Frank–Wolfe homotopy algorithm for a **single** subset size k.
 | `ytest` | factor/numeric | NULL | Test response vector |
 | `normalize` | logical | TRUE | Column-normalise X to unit ℓ₂ norm |
 | `lambda_refit` | numeric | 0 | Ridge penalty for refitting (0 = near MLE) |
-| `refit_method` | character | "nnet" | Refitting method: `"nnet"` or `"glmnet"` |
+| `refit_method` | character | "glmnet" | Refitting method: `"nnet"` or `"glmnet"` |
 
 ### `COMBSS_multinomial()`
 
 Runs the algorithm for **all** subset sizes k = 1, ..., Kmax sequentially.
 Same parameters as above, with `Kmax` replacing `k`.
 
-## References
 
-- Moka, S., Liquet, B., Zhu, H., and Muller, S. (2024). COMBSS: best subset
-  selection via continuous optimisation. *Statistics and Computing*, 34(2):75.
-
-- Khan, J., Wei, J.S., Ringnér, M., et al. (2001). Classification and
-  diagnostic prediction of cancers using gene expression profiling and
-  artificial neural networks. *Nature Medicine*, 7(6):673–679.
-
-- Tibshirani, R., Hastie, T., Narasimhan, B., and Chu, G. (2002). Diagnosis
-  of multiple cancer types by shrunken centroids of gene expression.
-  *Proceedings of the National Academy of Sciences*, 99(10):6567–6572.
-
-- Friedman, J., Hastie, T., and Tibshirani, R. (2010). Regularization paths
-  for generalized linear models via coordinate descent. *Journal of
-  Statistical Software*, 33(1):1–22.
-
-- James, G., Witten, D., Hastie, T., and Tibshirani, R. (2021). *An
-  Introduction to Statistical Learning: with Applications in R* (2nd ed.).
-  Springer.
-
-- Rohart, F., Gautier, B., Singh, A., and Lê Cao, K.-A. (2017). mixOmics:
-  An R package for 'omics feature selection and multiple data integration.
-  *PLoS Computational Biology*, 13(11):e1005752.
-
-## License
-
-MIT License
-
-## Contact
-
-For questions or issues, please open a GitHub issue or contact [your email].
