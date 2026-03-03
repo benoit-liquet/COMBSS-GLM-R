@@ -1,39 +1,6 @@
-# COMBSS for Multinomial Logistic Regression: Khan SRBCT Application
+# COMBSS for Multinomial Regression: Khan SRBCT Application
 
-R implementation of **COMBSS** (Continuous Optimisation for Best Subset Selection)
-for multinomial logistic regression, applied to the Khan SRBCT cancer classification
-dataset, as described in:
 
-> **Efficient Best Subset Selection in Sparse Generalised Linear Models for
-> Biomedical Applications**
->
-> Submitted to *Biometrics*, 2026.
-
-## Overview
-
-Best subset selection — finding the optimal subset of *k* predictors that
-maximises the likelihood — is fundamental for interpretable and parsimonious
-statistical modelling, but is NP-hard in general. COMBSS overcomes this
-computational barrier by reformulating the discrete combinatorial problem as a
-continuous optimisation over the hypercube [0,1]^p via a Boolean relaxation,
-and solving it using a Frank–Wolfe homotopy algorithm driven by envelope
-gradients (Danskin's theorem).
-
-The **multinomial extension** replaces the binary logistic log-likelihood with
-the multinomial log-likelihood for *C* classes. The coefficient vector
-β ∈ ℝ^p becomes a coefficient matrix B ∈ ℝ^(p × (C−1)), one column per
-non-baseline class. The Boolean relaxation applies the same diagonal masking
-T_t to each column of B simultaneously, enforcing a **common sparsity pattern**
-across all classes (grouped selection). The Danskin gradient for the
-multinomial case sums the squared coefficients across all C−1 classes:
-
-```
-∂f/∂t_j = −2(λ + δ) ‖Ξ_{m+j,:}‖² / t_j³
-```
-
-where Ξ is the minimiser of the inner ridge problem. This requires only a
-single call to `glmnet` with `family = "multinomial"` and
-`type.multinomial = "grouped"` per iteration.
 
 ## The Khan SRBCT Dataset
 
