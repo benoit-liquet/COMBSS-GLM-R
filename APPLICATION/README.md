@@ -178,9 +178,7 @@ the model (at k = 1 and k = 2), followed by gene 246 at k = 3. A core set of
 genes is progressively built up: by k = 8 the model already achieves 95%
 accuracy, and perfect classification is reached at k = 12 with genes 187,
 246, 509, 545, 910, 1074, 1319, 1389, 1645, 1954, 1955, and 2050. Beyond
-k = 13, accuracy drops back to 95% and remains stable, indicating that the
-inclusion of additional noise genes degrades performance slightly, which
-confirms that the method correctly identifies the optimal model size.
+k = 13, accuracy drops back to 95% and remains stable.
 
 ## Algorithm Details
 
