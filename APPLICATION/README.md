@@ -169,9 +169,7 @@ COMBSS achieves perfect classification accuracy (20/20) on the independent
 test set using only **12 genes** out of 2,308. By contrast, the multinomial
 group Lasso requires **35 genes** to reach the same performance, and its
 standard cross-validated models (λ.min and λ.1se) select 30 and 28 genes
-respectively while achieving only 95% test accuracy. This represents a
-reduction of more than 65% in model size relative to the group Lasso for
-equivalent predictive performance.
+respectively while achieving only 95% test accuracy. 
 
 ### Best-Subset Inclusion Path
 
