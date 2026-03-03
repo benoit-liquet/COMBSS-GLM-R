@@ -29,14 +29,7 @@ COMBSS-Multinomial/
     └── figures/                      # Generated figures
 ```
 
-## Installation
 
-No installation is required. Clone the repository and source the main
-function file in R:
-
-```bash
-git clone https://github.com/[your-username]/COMBSS-Multinomial.git
-```
 
 ### Dependencies
 
