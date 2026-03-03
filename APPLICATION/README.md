@@ -71,7 +71,7 @@ Test:     20 samples
 To run COMBSS for a specific subset size (e.g., k = 12), use the
 `COMBSS_multinomial_single_k()` function. The penalty schedule
 (δ_min, δ_max, r) is automatically calibrated from the data using
-power iteration to estimate the largest eigenvalue of X_u^T X_u.
+power iteration to estimate the largest eigenvalue of $X_u^T X_u$.
 
 ```r
 result_k12 <- COMBSS_multinomial_single_k(
