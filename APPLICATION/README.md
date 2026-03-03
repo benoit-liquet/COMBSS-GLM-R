@@ -36,7 +36,7 @@ library(glmnet)
 library(nnet)
 
 # Source the COMBSS multinomial code
-source("COMBSS multinomial.R")
+source("COMBSS_multinomial.R")
 
 # Load Khan SRBCT data
 data(Khan)
