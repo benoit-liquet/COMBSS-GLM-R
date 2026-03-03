@@ -18,16 +18,7 @@ classification and variable selection.
 
 ## Repository Structure
 
-```
-COMBSS-Multinomial/
-├── README.md
-├── R/
-│   └── Benoit_function_singlek.R     # COMBSS multinomial functions
-├── examples/
-│   └── example_khan.R                # Khan SRBCT demo script
-└── results/
-    └── figures/                      # Generated figures
-```
+
 
 
 
@@ -45,7 +36,7 @@ library(glmnet)
 library(nnet)
 
 # Source the COMBSS multinomial code
-source("R/Benoit_function_singlek.R")
+source("COMBSS multinomial.R")
 
 # Load Khan SRBCT data
 data(Khan)
