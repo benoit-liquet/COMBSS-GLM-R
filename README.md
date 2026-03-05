@@ -6,7 +6,9 @@ for generalised linear models, as described in:
 > **Efficient Best Subset Selection in Sparse Generalised Linear Models for Biomedical
 > Applications**
 >
-> Authors: [Your names here]
+> Authors: Benoit Liquet, Anant Mathur, Sarat Moka, Samuel Muller
+>
+> Authors are listed in alphabetical order {\color{red} (we will change the order later)}}
 >
 > Submitted to *Biometrics*, 2026.
 
