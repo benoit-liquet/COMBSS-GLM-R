@@ -8,7 +8,7 @@ for generalised linear models, as described in:
 >
 > Authors: Benoit Liquet, Anant Mathur, Sarat Moka, Samuel Muller
 >
-> Authors are listed in alphabetical order {\color{red} (we will change the order later)}}
+> Authors are listed in alphabetical order
 >
 > Submitted to *Biometrics*, 2026.
 
