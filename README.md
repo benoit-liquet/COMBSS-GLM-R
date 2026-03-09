@@ -99,8 +99,8 @@ cat("Test accuracy:", result$test_accuracy[result$best_k], "\n")
 
 
 ```
-Best k: 10
-Best subset: 1 2 3 4 5 6 7 8 9 10
+Best k: 9
+Best subset: 1 2 3 4 5 6 7 8 9
 
 Test accuracies:
   k =  1 | accuracy = 0.704 | variables: 4
