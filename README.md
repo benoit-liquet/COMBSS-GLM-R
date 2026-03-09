@@ -97,30 +97,30 @@ cat("Test accuracy:", result$test_accuracy[result$best_k], "\n")
 
 
 ```
-Best k: 9
-Best subset: 1 2 3 4 5 6 7 8 9
+Best k: 10
+Best subset: 1 2 3 4 5 6 7 8 9 10
 
 Test accuracies:
-  k =  1 | accuracy = 0.704 | variables: 4
-  k =  2 | accuracy = 0.756 | variables: 4,6
-  k =  3 | accuracy = 0.776 | variables: 3,4,6
-  k =  4 | accuracy = 0.829 | variables: 3,4,6,8
-  k =  5 | accuracy = 0.837 | variables: 3,4,6,8,9
-  k =  6 | accuracy = 0.843 | variables: 3,4,6,7,8,9
-  k =  7 | accuracy = 0.850 | variables: 3,4,5,6,7,8,9
-  k =  8 | accuracy = 0.878 | variables: 2,3,4,5,6,7,8,9
-  k =  9 | accuracy = 0.889 | variables: 1,2,3,4,5,6,7,8,9
-  k = 10 | accuracy = 0.898 | variables: 1,2,3,4,5,6,7,8,9,10
-  k = 11 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11
-  k = 12 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12
-  k = 13 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,29
-  k = 14 | accuracy = 0.888 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,28,29
-  k = 15 | accuracy = 0.884 | variables: 1,2,3,4,5,6,7,8,9,10,11,12,28,29,30
+  k =  1 | accuracy = 0.611 | variables: 7
+  k =  2 | accuracy = 0.660 | variables: 5,7
+  k =  3 | accuracy = 0.681 | variables: 5,6,7
+  k =  4 | accuracy = 0.719 | variables: 5,6,7,9
+  k =  5 | accuracy = 0.752 | variables: 2,5,6,7,9
+  k =  6 | accuracy = 0.774 | variables: 2,4,5,6,7,9
+  k =  7 | accuracy = 0.799 | variables: 2,4,5,6,7,9,10
+  k =  8 | accuracy = 0.816 | variables: 2,3,4,5,6,7,9,10
+  k =  9 | accuracy = 0.830 | variables: 1,2,3,4,5,6,7,9,10
+  k = 10 | accuracy = 0.843 | variables: 1,2,3,4,5,6,7,8,9,10
+  k = 11 | accuracy = 0.836 | variables: 1,2,3,4,5,6,7,8,9,10,20
+  k = 12 | accuracy = 0.836 | variables: 1,2,3,4,5,6,7,8,9,10,16,20
+  k = 13 | accuracy = 0.836 | variables: 1,2,3,4,5,6,7,8,9,10,16,20,21
+  k = 14 | accuracy = 0.837 | variables: 1,2,3,4,5,6,7,8,9,10,13,16,20,21
+  k = 15 | accuracy = 0.831 | variables: 1,2,3,4,5,6,7,8,9,10,13,16,20,21,25
 ```
 
 COMBSS correctly identifies the best model at **k=10**, recovering all 10
-truly active variables (variables 1–10) with a test accuracy of **89.8%**.
-The inclusion path shows that the strongest signals (variables 4 and 6) are
+truly active variables (variables 1–10) with a test accuracy of **84.3%**.
+The inclusion path shows that the strongest signals (variables 7 and 5) are
 selected first, with the remaining active variables progressively added as k
 increases. Beyond k=10, accuracy slightly decreases as noise variables enter
 the model, confirming that the method correctly identifies the true model
