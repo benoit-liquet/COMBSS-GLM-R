@@ -69,7 +69,8 @@ result_k12 <- COMBSS_multinomial_single_k(
   X            = X_train,
   y            = y_train,
   k            = 12,
-  Niter        = 50,
+  Niter        = 25,
+  alpha        = 0.01
   lambda       = 0,
   Xtest        = X_test,
   ytest        = y_test,
@@ -108,7 +109,8 @@ result <- COMBSS_multinomial(
   X            = X_train,
   y            = y_train,
   Kmax         = 20,
-  Niter        = 50,
+  Niter        = 25,
+  alpha        = 0.01
   lambda       = 0,
   Xtest        = X_test,
   ytest        = y_test,
