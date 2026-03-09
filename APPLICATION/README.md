@@ -197,6 +197,7 @@ Runs the Frank–Wolfe homotopy algorithm for a **single** subset size k.
 | `y` | factor/numeric | — | Response vector (class labels 1, ..., C) |
 | `k` | integer | — | Target subset size |
 | `Niter` | integer | 50 | Number of Frank–Wolfe iterations |
+| `alpha` | numeric | 0.01 | Learning rate |
 | `lambda` | numeric | 0 | Ridge parameter λ ≥ 0 |
 | `delta_min` | numeric | NULL | Initial δ (auto-calibrated if NULL) |
 | `delta_max` | numeric | NULL | Maximum δ (auto-calibrated if NULL) |
