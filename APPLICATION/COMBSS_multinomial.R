@@ -66,7 +66,7 @@ COMBSS_multinomial_single_k <- function(X, y, k,
   
   # Homotopy loop: i = 1, ..., N (Algorithm 1) [2]
   s <- rep(0, p_sel)
-  for (i in 1:(2*Niter+1)) {
+  for (i in 1:(2*Niter)) {
     # Geometric delta schedule clamped at delta_max [2]
     delta <- min(delta_min * r^i, delta_max)
     
@@ -442,7 +442,7 @@ COMBSS_multinomial <- function(X, y, Kmax,
     
     # Homotopy loop: i = 1, ..., N  (Algorithm 1)
     s <- rep(0, p_sel)
-    for (i in 1:(2*Niter+1)) {
+    for (i in 1:(2*Niter)) {
       # Geometric delta schedule clamped at delta_max
       delta <- min(delta_min * r^i, delta_max)
       
