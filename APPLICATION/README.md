@@ -84,14 +84,14 @@ result_k12 <- COMBSS_multinomial_single_k(
 **Output:**
 
 ```
-Calibration: nu_max=1228.3661 | delta_conc=4.874469 | delta_min=0.004874 | delta_max=4.874469 | r=1.148154
+Calibration: nu_max=1228.3661 | delta_conc=4.874469 | delta_min=0.004874 | delta_max=4.874469 | r=1.318257
 
 --- k = 12 | lambda = 0.000000 ---
-  iter  10 | delta = 0.019406 | alpha = 0.2000
-  iter  20 | delta = 0.077255 | alpha = 0.4000
-  iter  30 | delta = 0.307558 | alpha = 0.6000
-  iter  40 | delta = 1.224411 | alpha = 0.8000
-  iter  50 | delta = 4.874469 | alpha = 1.0000
+  iter  10 | delta = 0.077255 | alpha = 0.0100
+  iter  20 | delta = 1.224411 | alpha = 0.0100
+  iter  30 | delta = 4.874469 | alpha = 0.0100
+  iter  40 | delta = 4.874469 | alpha = 0.0100
+  iter  50 | delta = 4.874469 | alpha = 0.0100
   Selected: 187, 246, 509, 545, 910, 1074, 1319, 1389, 1645, 1954, 1955, 2050
   Test accuracy: 1.000
 ```
