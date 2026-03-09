@@ -8,7 +8,6 @@ library(glmnet)
 #
 # delta_i = min(delta_min * r^i, delta_max), i = 1..N
 #   where r = (delta_max / delta_min)^(1 / N)
-# alpha_i = i / N
 # Algorithm always runs exactly N iterations.
 # ================================================================
 
@@ -17,6 +16,7 @@ COMBSS_multinomial_single_k <- function(X, y, k,
                                         delta_max = NULL,
                                         Niter = 50,
                                         lambda = 0,
+                                        alpha=0.01,
                                         mandatory = NULL,
                                         Xtest = NULL, ytest = NULL,
                                         normalize = TRUE,
@@ -66,12 +66,12 @@ COMBSS_multinomial_single_k <- function(X, y, k,
   
   # Homotopy loop: i = 1, ..., N (Algorithm 1) [2]
   s <- rep(0, p_sel)
-  for (i in 1:Niter) {
+  for (i in 1:(2*Niter+1)) {
     # Geometric delta schedule clamped at delta_max [2]
     delta <- min(delta_min * r^i, delta_max)
     
     # Adaptive step size: alpha = i/N [2]
-    alpha <- i / Niter
+    #alpha <- i / Niter
     
     # Compute Danskin gradient [2]
     g <- grad_danskin_multinomial(t, X_norm, y, delta, lambda,
@@ -380,7 +380,7 @@ grad_danskin_multinomial <- function(t, X, y, delta, lambda,
 COMBSS_multinomial <- function(X, y, Kmax,
                                delta_min = NULL, delta_max = NULL,
                                Niter = 50,
-                               lambda = 0,
+                               lambda = 0, alpha=0.01,
                                mandatory = NULL,
                                Xtest = NULL, ytest = NULL,
                                normalize = TRUE,
@@ -442,12 +442,12 @@ COMBSS_multinomial <- function(X, y, Kmax,
     
     # Homotopy loop: i = 1, ..., N  (Algorithm 1)
     s <- rep(0, p_sel)
-    for (i in 1:Niter) {
+    for (i in 1:(2*Niter+1)) {
       # Geometric delta schedule clamped at delta_max
       delta <- min(delta_min * r^i, delta_max)
       
       # Adaptive step size: alpha = i/N
-      alpha <- i / Niter
+      #alpha <- i / Niter
       
       # Compute Danskin gradient [2]
       g <- grad_danskin_multinomial(t, X_norm, y, delta, lambda,
