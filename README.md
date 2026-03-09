@@ -6,7 +6,7 @@ for generalised linear models, as described in:
 > **Efficient Best Subset Selection in Sparse Generalised Linear Models for Biomedical
 > Applications**
 >
-> Authors: Benoit Liquet, Anant Mathur, Sarat Moka, Samuel Muller
+> Authors: Anant Mathur, Benoit Liquet, Samuel Muller, Sarat Moka
 >
 > Authors are listed in alphabetical order
 >
