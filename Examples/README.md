@@ -6,7 +6,7 @@ The first 10 features are related to the outcome (see the paper regarding the tr
 ## Source the model 
 ```{r}
 library(glmnet)
-source("../R/COMBSS_logistics.R")
+source("../R/COMBSS_logistic.R")
 ```
 
 ## Load example data (tab-separated, no header)
@@ -26,12 +26,10 @@ result <- COMBSS_logistic(
   X         = as.matrix(train[, 3:ncol(train)]),
   y         = as.numeric(train[, 1]),
   Kmax      = 15,
-  delta_min = 0.1,
-  r         = 1.5,
-  Niter     = 500,
+  alpha     = 0.01,
+  Niter     = 25,
   alpha     = 0.01,
   lambda    = 0,
-  epsilon   = 0.01,
   Xtest     = as.matrix(test[, 3:ncol(test)]),
   ytest     = as.numeric(test[, 1])
 )
