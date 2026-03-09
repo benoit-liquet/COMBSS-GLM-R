@@ -1,5 +1,5 @@
 # Example of COMBSS-glm for logistic model
-## High dimensional data set with p=10000 and n=200
+## High dimensional data set with p=1000 and n=200
 
 The first 10 features are related to the outcome (see the paper regarding the true generated model)
 
@@ -52,8 +52,8 @@ for (k in 1:15) {
 
 ```
 
-Best k: 12
-Best subset: 1 2 3 4 5 6 7 8 9 10 92 760
+Best k: 11
+Best subset: 1 2 3 4 5 6 7 8 9 10 92
 
 Test accuracies:
   k =  1 | accuracy = 0.707 | variables: 7
@@ -67,10 +67,10 @@ Test accuracies:
   k =  9 | accuracy = 0.872 | variables: 1,2,3,4,5,6,7,8,9
   k = 10 | accuracy = 0.879 | variables: 1,2,3,4,5,6,7,8,9,10
   k = 11 | accuracy = 0.880 | variables: 1,2,3,4,5,6,7,8,9,10,92
-  k = 12 | accuracy = 0.882 | variables: 1,2,3,4,5,6,7,8,9,10,92,760
+  k = 12 | accuracy = 0.875 | variables: 1,2,3,4,5,6,7,8,9,10,92,486
   k = 13 | accuracy = 0.879 | variables: 1,2,3,4,5,6,7,8,9,10,92,486,760
   k = 14 | accuracy = 0.880 | variables: 1,2,3,4,5,6,7,8,9,10,92,486,760,825
-  k = 15 | accuracy = 0.880 | variables: 1,2,3,4,5,6,7,8,9,10,92,486,760,825,978
+  k = 15 | accuracy = 0.867 | variables: 1,2,3,4,5,6,7,8,9,10,92,318,486,760,825
 ```
 
 COMBSS successfully recovers all 10 truly active variables (variables 1–10)
