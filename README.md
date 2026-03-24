@@ -3,8 +3,7 @@
 R implementation of **COMBSS** (Continuous Optimisation for Best Subset Selection)
 for generalised linear models, as described in:
 
-> **Efficient Best Subset Selection in Sparse Generalised Linear Models for Biomedical
-> Applications**
+> **Parsimonious Subset Selection for Generalized Linear Models with Biomedical Applications**
 >
 > Authors: Anant Mathur, Benoit Liquet, Samuel Muller, Sarat Moka
 >
