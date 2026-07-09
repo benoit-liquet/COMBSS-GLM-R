@@ -1,6 +1,6 @@
 # COMBSS for Multinomial Regression: Khan SRBCT Application
 
-###  Chrsitina you can do it 
+
 
 ## The Khan SRBCT Dataset
 
